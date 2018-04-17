@@ -6,7 +6,9 @@ object NthLargest extends App {
 
     if (findInList < 0)
       n
-    else {
+    else if (n > findInList) {
+      throw new IllegalArgumentException ("n is larger than the list length")
+    } else {
       findInList
     }
   }
